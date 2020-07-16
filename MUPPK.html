@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Organization Chart Plugin</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="jquery.orgchart.css">
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    #chart-container { height:  620px; }
+    .orgchart { background: white; }
+  </style>
+</head>
+<body>
+
+  <div id="chart-container"></div>
+
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.orgchart.js"></script>
+  <script type="text/javascript">
+   var nama = 'RAIS';
+    $(function() {
+
+    var datascource = {
+      'name': nama,
+      'title': 'manager Unit Pelaksana Proyek Ketenagakelistrikan',
+      'children': [
+      {'nama': nama, 'title':'pejabat<br><button type="submit" >sdcdsc</button>',
+              'children': [  
+
+         
+
+                { 'name': nama, 'title': 'Pejabat Pelaksana Pengadaan' },
+                          ]
+              },
+                { 'name': nama, 'title': 'Supervisor Konstruksi' },
+                  { 'name': nama, 'title': 'Supervisor Perencanaan Listrik Pedasaan' },
+        
+
+
+
+
+        
+      
+
+        
+        
+
+
+
+
+
+
+      ]
+
+
+
+
+
+
+
+    };
+
+    $('#chart-container').orgchart({
+      'data' : datascource,
+      'nodeContent': 'title',
+      'verticalLevel': 3,
+      'visibleLevel': 4
+    });
+
+  });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Organization Chart Plugin</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="jquery.orgchart.css">
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    #chart-container { height:  620px; }
+    .orgchart { background: white; }
+  </style>
+</head>
+<body>
+
+  <div id="chart-container"></div>
+
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.orgchart.js"></script>
+  <script type="text/javascript">
+   var nama = 'RAIS';
+    $(function() {
+
+    var datascource = {
+      'name': nama,
+      'title': 'General manager',
+      'children': [
+
+          { 'name': nama, 'title': 'Pejabat ' ,
+          'children':[
+
+                { 'name': nama, 'title': 'Pejabat Pelaksana Keselamatan<br>,kesehatan kerja dan lingkungan' },
+                { 'name': nama, 'title': 'Pejabat Pelaksana Pengadaan' },
+                { 'name': nama, 'title': 'Pejabat Perencana Pengadaan' },
+        ]
+},
+
+
+
+        
+      
+
+        { 'name': nama, 'title': 'Senior Manager Keuangan',
+          'children': [
+            { 'name': nama, 'title': 'Manager Akuntansi',
+            'children': [                 
+              { 'name': nama, 'title': 'Assistant Manager Pengelolaan Pendapatan' },
+              { 'name': nama, 'title': 'UE engineer' }
+                        ]
+            },
+
+
+            { 'name': nama, 'title': 'Manager Keuangan',
+              'children': [                 
+              { 'name': nama, 'title': 'Assistant Manager Pengelolaan Pendapatan' },
+              { 'name': nama, 'title': 'UE engineer' }
+                          ]
+            }
+
+          ]
+        },
+
+
+
+
+         { 'name': nama, 'title': ' Senior Manager Niaga dan Pelayanan Pelanggan',
+          'children': [
+            { 'name': nama, 'title': 'Manager Administrasi Niaga',
+            'children': [                 
+              { 'name': nama, 'title': 'Assistant Manager Pengendalian Piutang' }
+                        ]
+            },
+
+
+            { 'name': nama, 'title': 'Manager Revenue Assurance dan Mekanisme Niaga',
+              'children': [                 
+              { 'name': nama, 'title': 'Assistant Manager Revenue Assurance' },
+              { 'name': nama, 'title': ' Manager Strategi Pemasaran' }
+              ]
+            }
+
+          ]
+        }
+
+
+
+
+
+
+      ]
+
+
+
+
+
+
+
+    };
+
+    $('#chart-container').orgchart({
+      'data' : datascource,
+      'nodeContent': 'title',
+      'verticalLevel': 3,
+      'visibleLevel': 4
+    });
+
+  });
+  </script>
+  </body>
+</html>

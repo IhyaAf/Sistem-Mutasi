@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Organization Chart Plugin</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="jquery.orgchart.css">
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    #chart-container { height:  620px; }
+    .orgchart { background: white; }
+  </style>
+</head>
+<body>
+
+  <div id="chart-container"></div>
+
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.orgchart.js"></script>
+  <script type="text/javascript">
+   var nama = 'RAIS';
+    $(function() {
+
+    var datascource = {
+      'name': nama,
+      'title': 'General manager',
+      'children': [
+
+          { 'name': nama, 'title': 'Pejabat ' ,
+          'children':[
+
+                { 'name': nama, 'title': 'Pejabat Pelaksana Keselamatan<br>,kesehatan kerja dan lingkungan' },
+                { 'name': nama, 'title': 'Pejabat Pelaksana Pengadaan' },
+                { 'name': nama, 'title': 'Pejabat Perencana Pengadaan' },
+        ]
+},
+
+
+
+        
+      
+
+        { 'name': nama, 'title': 'Manager Bagian Jaringan',
+          'children': [
+            { 'name': nama, 'title': 'Supervisor Operasi',
+            
+            },
+			
+			{ 'name': nama, 'title': 'Supervisor PDKB',
+            },
+
+
+            { 'name': nama, 'title': 'Supervisor Pemeliharaan ',
+              
+            }
+
+          ]
+        },
+  { 'name': nama, 'title': 'Manager Bagian Keuangan, SDM dan Administrasi',
+          'children': [
+            { 'name': nama, 'title': 'Supervisor Keuangan dan Akuntansi ',
+            
+            },
+			
+			{ 'name': nama, 'title': 'Supervisor SDM dan Administrasi ',
+            }
+
+          ]
+        },
+		
+		
+ { 'name': nama, 'title': 'Manager Bagian Keuangan, SDM dan Administrasi',
+          'children': [
+            { 'name': nama, 'title': 'Supervisor Keuangan dan Akuntansi',
+            
+            },
+			
+			{ 'name': nama, 'title': 'Supervisor SDM dan Administrasi',
+            }
+
+          ]
+        },
+
+ { 'name': nama, 'title': 'Manager Bagian Konstruksi',
+          'children': [
+            { 'name': nama, 'title': 'Supervisor Logistik',
+            
+            }
+		
+
+          ]
+        },
+	
+ { 'name': nama, 'title': 'Manager Bagian Pemasaran dan Pelayanan Pelanggan',
+          'children': [
+            { 'name': nama, 'title': 'Supervisor  Pemasaran dan Pelayanan Pelanggan',
+            
+            }
+		
+
+          ]
+        },	
+		
+		
+	 { 'name': nama, 'title': 'Manager Bagian Perencanaan',
+          'children': [
+            { 'name': nama, 'title': 'Supervisor Mapping Data Jaringan dan Pelanggan',
+            
+            },
+			
+			{ 'name': nama, 'title': 'Supervisor Perencanaan Sistem',
+            }
+
+          ]
+        },
+
+	 { 'name': nama, 'title': 'Manager Bagian Transaksi Energi Listrik',
+          'children': [
+            { 'name': nama, 'title': 'Supervisor Pemeliharaan Meter Transaksi',
+            
+            },
+			
+			{ 'name': nama, 'title': 'Supervisor Pengendalian Susut',
+            },
+
+
+            { 'name': nama, 'title': 'Supervisor Transaksi Energi Listrik',
+              
+            }
+
+          ]
+        }	
+
+
+      ]
+
+    };
+
+    $('#chart-container').orgchart({
+      'data' : datascource,
+      'nodeContent': 'title',
+      'verticalLevel': 3,
+      'visibleLevel': 4
+    });
+
+  });
+  </script>
+  </body>
+</html>
